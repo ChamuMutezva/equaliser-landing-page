@@ -1,0 +1,354 @@
+/* ----------------------------------- */
+/*          CUSTOM PROPERTIES          */
+/* ------------------------------------*/
+
+:root {
+    --clr-dark: 244 23% 12%;
+    /*#191826*/
+    --clr-light: 20 33% 99%;
+    /*#FCFAF9 */
+    --clr-turq: 177 68% 64%;
+    /*#66E2DC */
+    --clr-orange: 12 94% 65%;
+    /*#FA7453*/
+    --clr-cream: 33 100% 70%;
+    /*#FFB964*/
+
+    /* font-families */
+    --ff-ibm: "IBM Plex Sans", sans-serif;
+
+    /* font-sizes */
+    --fs-900: 9.375rem;
+    --fs-800: 4.0625rem;
+    --fs-700: 2.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+
+    /* font-weights */
+    --wt-bold: 700;
+    --wt-semi-bold: 500;
+    --wt-normal: 400;
+    --wt-light: 300;
+
+}
+
+/* ----------------------------------- */
+/*                 RESET               */
+/* ------------------------------------*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul,
+ol elements with a list role,
+which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--ff-ibm);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ----------------------------------- */
+/*          UTILITY CLASSES            */
+/* ------------------------------------*/
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container {
+    max-width: 62rem;
+    padding-inline: 1.5rem;
+    padding-block: 2.5rem;
+    margin-inline: auto;
+}
+
+/* colors */
+.bg-dark {
+    background-color: hsl(var(--clr-dark));
+}
+
+.bg-light {
+    background-color: hsl(var(--clr-light));
+}
+
+.bg-turq {
+    background-color: hsl(var(--clr-turq));
+}
+
+.bg-cream {
+    background-color: hsl(var(--clr-cream));
+}
+
+.bg-orange {
+    background-color: hsl(var(--clr-orange));
+}
+
+.text-dark {
+    color: hsl(var(--clr-dark));
+}
+
+.text-light {
+    color: hsl(var(--clr-light));
+}
+
+.bd-radius {
+    border-radius: 10px;
+}
+
+/* topography */
+
+.ff-ibm {
+    font-family: var(--ff-ibm)
+}
+
+.letter-spacing-1 {
+    letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+    letter-spacing: 2.35px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
+}
+
+.fs-700 {
+    font-size: var(--fs-700);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-200 {
+    font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.25;
+}
+
+.wt-light {
+    font-weight: var(--wt-light);
+}
+
+.wt-normal {
+    font-weight: var(--wt-normal);
+}
+
+.wt-semi-bold {
+    font-weight: var(--wt-semi-bold);
+}
+
+.wt-bold {
+    font-weight: var(--wt-bold);
+}
+
+/* ------------------- */
+/* Components          */
+/* ------------------- */
+
+.btn {
+    /* margin-left: 3rem; 
+    aspect-ratio: 2/1; */
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.social-sites {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-heading {
+    margin-top: 3.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-content-holder {
+    padding-inline: 2.25rem;
+}
+
+.kicker {
+    padding-block: 1rem;
+}
+
+.footer-text {
+    padding-block: 2.5rem;
+}
+
+.footer-text-small {
+    display: block;
+}
+
+/* ------------------- */
+/* Layouts             */
+/* ------------------- */
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.wrapper::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/bg-main-mobile.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(0deg);
+    top: -10%;
+    right: -20%;
+}
+
+.main {
+    margin-top: 8.75rem;
+}
+
+.decorative {
+    background-image: url("./assets/bg-pattern-2.svg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.image-holder {
+    position: relative;
+    top: -8.5rem;
+}
+
+.decorative-img {
+    width: 64%;
+    margin: auto;
+}
+
+.main-content {
+    margin-top: -7rem;
+    max-width: 25rem;
+    margin-inline: auto;
+}
+
+
+.footer-container {
+    padding-block: 5.5rem;
+}
