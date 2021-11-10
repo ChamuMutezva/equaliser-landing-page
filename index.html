@@ -16,24 +16,30 @@
 
   <div class="wrapper">
     <!-- <div class="overlay"></div> -->
-    <header class="container">
+    <header class="container header">
       <div class="logo">
         <img src="./assets/logo.svg	" alt="">
       </div>
-      <h1 class="fs-700 main-heading">We make your music sound extraordinary.</h1>
-
-      <p class="fs-300">
-        A system audio equalizer specifically designed for Android and iOS. Freely tune the
-        way your music sounds with a professional grade parametric EQ & volume mixer. Control
-        bass, mids, treble, gain control, reverb, and more!
-      </p>
+      <div class="header-content">
+        <h1 class="fs-700 main-heading">We make your music sound extraordinary.</h1>
+        <p class="fs-300">
+          A system audio equalizer specifically designed for Android and iOS. Freely tune the
+          way your music sounds with a professional grade parametric EQ & volume mixer. Control
+          bass, mids, treble, gain control, reverb, and more!
+        </p>
+      </div>
     </header>
-    <main class="main">
-      <div class="decorative bg-dark bd-radius">
-        <div class="image-holder container">
-          <img class="decorative-img" src="./assets/illustration-app.png" alt="">
-        </div>
 
+    <main class="main">
+
+      <div class="decorative container bg-dark bd-radius">
+        <!--decorative image-->
+        <div class="image-holder">
+          <img class="decorative-img" src="./assets/illustration-app.png" alt="" aria-hidden="true">
+        </div>
+        <!--end decorattive image-->
+
+        <!--main content-->
         <div class="main-content bg-orange bd-radius">
           <div class="main-content-holder container">
             <h2 class="text-light fs-600">Premium EQ</h2>
@@ -54,7 +60,11 @@
             </div>
           </div>
         </div>
+        <!--end main content-->
+
       </div>
+
+
     </main>
     <footer>
       <div class="footer-container container">

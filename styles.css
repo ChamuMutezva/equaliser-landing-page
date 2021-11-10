@@ -141,7 +141,7 @@ select {
 }
 
 .container {
-    max-width: 62rem;
+    max-width: 66.375rem;
     padding-inline: 1.5rem;
     padding-block: 2.5rem;
     margin-inline: auto;
@@ -198,6 +198,10 @@ select {
     letter-spacing: 2.35px;
 }
 
+.line-height-1 {
+    line-height: 1;
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -238,7 +242,7 @@ select {
 .fs-800,
 .fs-700,
 .fs-600 {
-    line-height: 1.25;
+    line-height: 1;
 }
 
 .wt-light {
@@ -269,6 +273,7 @@ select {
     padding: 1rem;
     text-decoration: none;
     justify-content: center;
+
 }
 
 .social-sites {
@@ -319,6 +324,7 @@ select {
     transform: rotate(0deg);
     top: -10%;
     right: -20%;
+    z-index: -1;
 }
 
 .main {
@@ -330,20 +336,24 @@ select {
     background-size: auto;
     background-repeat: no-repeat;
     background-position: top center;
+    padding-block: 0;
+    padding-inline: 0;
 }
 
 .image-holder {
+    max-width: 19.5rem;
+    width: 55%;
     position: relative;
     top: -8.5rem;
+    margin: auto;
 }
 
 .decorative-img {
-    width: 64%;
     margin: auto;
 }
 
 .main-content {
-    margin-top: -7rem;
+    margin-top: 0;
     max-width: 25rem;
     margin-inline: auto;
 }
@@ -351,4 +361,78 @@ select {
 
 .footer-container {
     padding-block: 5.5rem;
+}
+
+/* ----------------------- */
+/* MEDIA QUERIES           */
+/* ----------------------- */
+
+@media screen and (min-width: 36.25rem) {
+
+    .fs-700 {
+        font-size: var(--fs-800);
+    }
+
+    .container {
+        padding-inline: 2.5rem;
+    }
+
+    .wrapper::after {
+        position: absolute;
+        content: "";
+        width: 40%;
+        min-height: 100vh;
+        background-image: url("./assets/bg-pattern-1.svg");
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: rotate(0deg);
+        top: -2.5%;
+        right: -4%;
+        z-index: -1;
+    }
+
+
+    .header-content {
+        max-width: 66%;
+    }
+
+    .decorative {
+        position: relative;
+        margin-inline: 2rem;
+        max-width: 66.375rem;
+    }
+
+    .image-holder {
+        margin-inline-start: 1.5rem;
+    }
+
+    .main {
+        margin-top: 14.75rem;
+        max-width: 66.375rem;
+        padding-inline: 2.5rem;
+        margin-inline: auto;
+    }
+
+    .main-content {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        width: 60%;
+    }
+
+    .main-heading {
+        margin-top: 6.25rem;
+        margin-block-end: 2rem;
+    }
+
+    .heading-content {
+        font-size: var(--fs-400);
+    }
+}
+
+@media screen and (min-width: 36.25rem) {
+    .fs-600 {
+        font-size: var(--fs-700);
+    }
 }
