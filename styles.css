@@ -301,7 +301,7 @@ select {
 }
 
 .footer-text-small {
-    display: block;
+   /* display: block; */
 }
 
 /* ------------------- */
@@ -369,12 +369,23 @@ select {
 
 @media screen and (min-width: 36.25rem) {
 
+    .fs-300 {
+        font-size: var(--fs-400);
+    }
+
     .fs-700 {
         font-size: var(--fs-800);
     }
 
     .container {
         padding-inline: 2.5rem;
+    }
+
+    .wrapper::before {       
+        background-position: top left;       
+        transform: rotate(100deg);
+        top: -10%;
+        right: 20%;      
     }
 
     .wrapper::after {
@@ -399,26 +410,31 @@ select {
 
     .decorative {
         position: relative;
-        margin-inline: 2rem;
+       /* margin-inline: 2rem; */
         max-width: 66.375rem;
     }
 
     .image-holder {
         margin-inline-start: 1.5rem;
+        width: 43%;
     }
 
     .main {
         margin-top: 14.75rem;
         max-width: 66.375rem;
-        padding-inline: 2.5rem;
+        padding-inline: 2rem;
         margin-inline: auto;
     }
 
     .main-content {
         position: absolute;
-        top: 50%;
-        left: 35%;
+        top: 27%;
+        left: 34%;
         width: 60%;
+    }
+
+    .main-content-holder > p {
+        margin-block-start: 1.2rem;
     }
 
     .main-heading {
@@ -429,10 +445,47 @@ select {
     .heading-content {
         font-size: var(--fs-400);
     }
+
+    .footer-container {       
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer {
+        padding-block-start: 7rem;
+    }
+
+    .footer-content {
+        flex: 1 1 50%;
+    }
+
+    .socials {
+        flex: 1 1 30%;
+    }
+    .social-sites {        
+        justify-content: flex-end;       
+    }
 }
 
-@media screen and (min-width: 36.25rem) {
+@media screen and (min-width: 67.5rem) {
     .fs-600 {
         font-size: var(--fs-700);
+    }
+
+    .wrapper::before {        
+        top: 10%;
+        right: 35%;
+    }
+
+    .footer-content {
+        display: flex;
+        align-items: baseline;
+        flex: 1 1 80%;
+        gap: 5rem;
+    }
+
+    .socials {
+        flex: 1 1 20%;
     }
 }
