@@ -277,7 +277,7 @@ select {
     outline: none;
 }
 
-.link-btn:hover>img ,
+.link-btn:hover>img,
 .link-btn:focus>img {
     filter: invert(56%) sepia(54%) saturate(2890%) brightness(108%) contrast(96%);
     cursor: pointer;
@@ -308,15 +308,22 @@ select {
 
 .btn:first-child:hover,
 .btn:first-child:focus {
-	background-color: hsl(var(--clr-turq));
+    background-color: hsl(var(--clr-turq));
     cursor: pointer;
     outline: dashed currentColor;
     outline-offset: 0.25em;
 }
 
 .btn:last-child:hover,
-.btn:last-child:focus{
-	background-color: hsl(var(--clr-cream));
+.btn:last-child:focus {
+    background-color: hsl(var(--clr-cream));
+    cursor: pointer;
+    outline: dashed currentColor;
+    outline-offset: 0.25em;
+}
+
+.btn-logo:hover,
+.btn-logo:focus {
     cursor: pointer;
     outline: dashed currentColor;
     outline-offset: 0.25em;
