@@ -271,10 +271,20 @@ select {
     display: flex;
     align-items: center;
     padding: 1rem;
+    gap: .5rem;
     text-decoration: none;
     justify-content: center;
-
+    outline: none;
 }
+
+.link-btn:hover>img ,
+.link-btn:focus>img {
+    filter: invert(56%) sepia(54%) saturate(2890%) brightness(108%) contrast(96%);
+    cursor: pointer;
+    outline: dashed currentColor;
+    outline-offset: 0.25em;
+}
+
 
 .social-sites {
     display: flex;
@@ -296,12 +306,28 @@ select {
     padding-block: 1rem;
 }
 
+.btn:first-child:hover,
+.btn:first-child:focus {
+	background-color: hsl(var(--clr-turq));
+    cursor: pointer;
+    outline: dashed currentColor;
+    outline-offset: 0.25em;
+}
+
+.btn:last-child:hover,
+.btn:last-child:focus{
+	background-color: hsl(var(--clr-cream));
+    cursor: pointer;
+    outline: dashed currentColor;
+    outline-offset: 0.25em;
+}
+
 .footer-text {
     padding-block: 2.5rem;
 }
 
 .footer-text-small {
-   /* display: block; */
+    /* display: block; */
 }
 
 /* ------------------- */
@@ -381,11 +407,11 @@ select {
         padding-inline: 2.5rem;
     }
 
-    .wrapper::before {       
-        background-position: top left;       
+    .wrapper::before {
+        background-position: top left;
         transform: rotate(100deg);
         top: -10%;
-        right: 20%;      
+        right: 20%;
     }
 
     .wrapper::after {
@@ -410,7 +436,7 @@ select {
 
     .decorative {
         position: relative;
-       /* margin-inline: 2rem; */
+        /* margin-inline: 2rem; */
         max-width: 66.375rem;
     }
 
@@ -433,7 +459,7 @@ select {
         width: 60%;
     }
 
-    .main-content-holder > p {
+    .main-content-holder>p {
         margin-block-start: 1.2rem;
     }
 
@@ -446,7 +472,7 @@ select {
         font-size: var(--fs-400);
     }
 
-    .footer-container {       
+    .footer-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -463,8 +489,9 @@ select {
     .socials {
         flex: 1 1 30%;
     }
-    .social-sites {        
-        justify-content: flex-end;       
+
+    .social-sites {
+        justify-content: flex-end;
     }
 }
 
@@ -473,7 +500,7 @@ select {
         font-size: var(--fs-700);
     }
 
-    .wrapper::before {        
+    .wrapper::before {
         top: 10%;
         right: 35%;
     }
