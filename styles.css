@@ -348,10 +348,6 @@ select {
     padding-block: 2.5rem;
 }
 
-.footer-text-small {
-    /* display: block; */
-}
-
 /* ------------------- */
 /* Layouts             */
 /* ------------------- */
@@ -364,7 +360,7 @@ select {
     position: absolute;
     content: "";
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("./assets/bg-main-mobile.png");
     background-position: top right;
     background-repeat: no-repeat;
@@ -429,17 +425,36 @@ select {
         padding-inline: 2.5rem;
     }
 
+    .header {
+        position: relative;
+    }
+
+  /*  .header::after {
+        content: "";
+        position: absolute;
+        background-image: url("./assets/bg-main-tablet.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        top: -20%;
+        left: -25%;
+    }
+*/
     .wrapper::before {
-        background-position: top left;
-        transform: rotate(100deg);
-        top: -10%;
-        right: 20%;
+        background-image: url("./assets/bg-main-tablet.png");
+        background-position: center;
+        background-size: cover;
+        transform: rotate(0deg);
+        top: -6%;
+        right: 0%;
     }
 
     .wrapper::after {
         position: absolute;
         content: "";
-        width: 40%;
+        width: 35%;
         min-height: 100vh;
         background-image: url("./assets/bg-pattern-1.svg");
         background-position: top right;
@@ -554,10 +569,13 @@ select {
         line-height: 1.9;
     }
 
-    .wrapper::before {
-        top: 10%;
-        right: 35%;
+    .wrapper::before {  
+        min-height: 200vh;     
+        background-image: url("./assets/bg-main-desktop.png");
+        top: -5%;
+        right: 0%;       
     }
+
 
     .wrapper::after {
         min-height: 65vh;
