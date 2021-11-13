@@ -15,7 +15,7 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "orientation":"portrait",
+    "orientation": "portrait",
     "description": "Frontend mentor landing page challenges",
     "lang": "en-US",
     "display": "standalone",

@@ -18,7 +18,8 @@
     --ff-ibm: "IBM Plex Sans", sans-serif;
 
     /* font-sizes */
-    --fs-900: 9.375rem;
+    --fs-1000: 9.375rem;
+    --fs-900: 5.5rem;
     --fs-800: 4.0625rem;
     --fs-700: 2.5rem;
     --fs-600: 2rem;
@@ -118,7 +119,8 @@ select {
     margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* added line */
+    white-space: nowrap;
+    /* added line */
     border: 0;
 }
 
@@ -516,13 +518,37 @@ select {
 }
 
 @media screen and (min-width: 67.5rem) {
+
+    .fs-700 {
+        font-size: var(--fs-900);
+    }
+
     .fs-600 {
         font-size: var(--fs-700);
     }
 
+    .header {
+        padding-block-start: 3.5rem;
+    }
+
+    .main-heading {
+        margin-top: 7.5rem;
+    }
+
+    .header-content {
+        max-width: 88%;
+    }
+
+
     .wrapper::before {
         top: 10%;
         right: 35%;
+    }
+
+    .wrapper::after {
+        min-height: 65vh;
+        top: -2%;
+        right: 0%;
     }
 
     .footer-content {
