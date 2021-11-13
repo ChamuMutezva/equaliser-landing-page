@@ -539,6 +539,20 @@ select {
         max-width: 88%;
     }
 
+    .kicker {
+        padding-block-start: 1rem;
+        padding-block-end: 2.5rem;
+    }
+
+    .main-content {
+        top: 23%;
+        left: 57%;
+        width: 38%;
+    }
+
+    .main-content-holder>p {
+        line-height: 1.9;
+    }
 
     .wrapper::before {
         top: 10%;
